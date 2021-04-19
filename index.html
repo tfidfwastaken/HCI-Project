@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hackabit</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="plants">
+        <h1>Hackabit</h1>
+        <div class="sapling">
+          <img src="ded-sap.jpg" width=80px>
+          <p>Do 20 pushups</p>
+        </div>
+        <div class="sapling">
+          <img src="mid-sap.png" width=100px>
+          <p>Avoid snacking on junk food</p>
+        </div>
+        <div class="sapling">
+          <img src="lorge-sap.png" width=100px>
+          <p>Write a paragraph of my next book</p>
+        </div>
+      </div>
+      <div class="habits">
+        <h1>Habits <i class="far fa-edit" style="margin-left: 15px; font-size: 0.75em; cursor: pointer;" onclick="window.location.href='edit-habits.html'"></i></h1>
+        <div class="habit-box make">
+          <h3>Do 20 pushups</h3>
+          <p>after: brushing your teeth</p>
+          <div class="buttons">
+            <div class="button -green center" onclick="done(this)">Done</div>
+            <div class="button -salmon center" onclick="notdone(this)">Not done</div>
+            <a class="button -sun center" href="#popup1">Reschedule</a>
+          </div>
+        </div>
+        <div class="habit-box break">
+          <h3>Avoid snacking on junk food</h3>
+          <p>prevent this by avoiding the snacks section while shopping</p>
+          <div class="buttons">
+            <div class="button -green center" onclick="done(this)">Done</div>
+            <div class="button -salmon center" onclick="notdone(this)">Not done</div>
+            <a class="button -sun center" href="#popup1">Reschedule</a>
+          </div>
+        </div>
+        <div class="habit-box make">
+          <h3>Write a paragraph of my next book</h3>
+          <p>after: brushing your teeth</p>
+          <div class="buttons">
+            <div class="button -green center" onclick="done(this)">Done</div>
+            <div class="button -salmon center" onclick="notdone(this)">Not done</div>
+            <a class="button -sun center" href="#popup1">Reschedule</a>
+          </div>
+        </div>
+        <div class="button -regular center" style="margin-top: 25px;" onclick="window.location.href='pr.html'">Setup Punishments and Rewards</div>
+        <div id="popup1" class="overlay">
+          <div class="popup">
+            <h2>Select new time</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              Date: <input type="date" name="mydate" placeholder="Select new date" ><br><br>
+              Time: <input type="time" name="mytime" placeholder="Select time"><br><br>
+              <div class="button -green center" onclick="window.location.href='#'">Save</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <h1>My Habit Log</h1>
+        <p>Disciplined people are better at structuring their lives in a way
+          that does not require heroic willpower and self-control. They spend less
+          time in tempting situations.</p>
+        <p>
+          Simply resisting temptation is an ineffective strategy. In the short-run you can choose to overpower temptation; in the long-run, we become a product of the environment we live in.
+
+          State one way in which you will modify your environment to support your habit:</p>
+        <textarea name="" id="" rows="6" cols="40" tabindex=""></textarea>
+        <div class="button -regular center" style="box-shadow: none; max-width:80px;" onclick="save(this)">Save to log</div>
+      </div>
+    </div>
+  </body>
+</html>

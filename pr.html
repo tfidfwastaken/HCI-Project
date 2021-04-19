@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hackabit - Punishments and Rewards</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body onload="addbtn()">
+    <i class="fas fa-arrow-left" style="font-size: 2em; margin: 3vh 0 0 5%; cursor: pointer;" onclick="window.location.href='index.html'"></i>
+    <div class="container-pr">
+      <div class="punishments">
+        <h1>Punishments <i class="fas fa-plus-circle" style="margin-left: 15px; font-size: 0.75em; cursor: pointer;" onclick="window.location.href='#popup1'"></i></h1>
+        <div class="pdetail">
+          <p><b>Failure of: </b><br>Do 20 pushups</p>
+          <p><b>Leads to punishment: <br></b>Pay ₹20 to World Cancer Research Organisation</p>
+        <hr>
+        </div>
+        <div class="pdetail">
+          <p><b>Failure of: </b><br>Avoid snacking on junk food</p>
+          <p><b>Leads to punishment:</b><br>Do 40 pushups</p>
+        <hr>
+        </div>
+      </div>
+      <div class="rewards">
+        <h1>Rewards <i class="fas fa-plus-circle" style="margin-left: 15px; font-size: 0.75em; cursor: pointer;" onclick="window.location.href='#popup2'"></i></h1>
+        <div class="rdetail">
+          <p><b>On hitting goal 10 times:<br></b>Do 20 pushups</p>
+          <p><b>Reward: <br></b>Have a spa day!</p>
+        <hr>
+        </div>
+        <div class="rdetail">
+          <p><b>On hitting goal 15 times:<br></b>Write a paragraph of my next book</p>
+          <p><b>Reward: <br></b>Spend a weekend at a dog shelter</p>
+        <hr>
+        </div>
+      </div>
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Add new punishment</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            Failure of:
+            <select name="something" placeholder="Select habit" >
+              <option>Do 20 pushups</option>
+              <option>Avoid snacking on junk food</option>
+              <option>Write a paragraph of my next book</option>
+            </select>
+              <br><br>
+              <label>Leads to punishment:</label><br>
+              <textarea name="bleh" rows="3" cols="50"></textarea><br><br>
+            <div class="button -green center" onclick="window.location.href='#'">Save</div>
+          </div>
+        </div>
+      </div>
+      <div id="popup1e" class="overlay">
+        <div class="popup">
+          <h2>Edit punishment</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            Failure of:
+            <select name="something" placeholder="Select habit" >
+              <option>Do 20 pushups</option>
+              <option>Avoid snacking on junk food</option>
+              <option>Write a paragraph of my next book</option>
+            </select>
+              <br><br>
+              <label>Leads to punishment:</label><br>
+              <textarea name="bleh" rows="3" cols="50"></textarea><br><br>
+            <div class="button -green center" onclick="window.location.href='#'">Save</div>
+          </div>
+        </div>
+      </div>
+      <div id="popup2" class="overlay">
+        <div class="popup">
+          <h2>Add new reward</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            On hitting goal <input type="number" name="num" min="0" style="width: 25px;"> times:
+            <select name="something" placeholder="Select habit" >
+              <option>Do 20 pushups</option>
+              <option>Avoid snacking on junk food</option>
+              <option>Write a paragraph of my next book</option>
+            </select>
+              <br><br>
+              <label>Leads to reward:</label><br>
+              <textarea name="bleh" rows="3" cols="50"></textarea><br><br>
+            <div class="button -green center" onclick="window.location.href='#'">Save</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup2e" class="overlay">
+      <div class="popup">
+        <h2>Edit reward</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          On hitting goal <input type="number" name="num" min="0" style="width: 25px;"> times:
+          <select name="something" placeholder="Select habit" >
+            <option>Do 20 pushups</option>
+            <option>Avoid snacking on junk food</option>
+            <option>Write a paragraph of my next book</option>
+          </select>
+          <br><br>
+          <label>Leads to reward:</label><br>
+          <textarea name="bleh" rows="3" cols="50"></textarea><br><br>
+          <div class="button -green center" onclick="window.location.href='#'">Save</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

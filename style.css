@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap');
+:root {
+  --color-dark:  #161616;
+  --color-ocean:  #416dea;
+  --color-grass: #3dd28d;
+  --color-snow: #FFFFFF;
+  --color-salmon: #F32C52;
+  --color-sun: #feee7d;
+  --color-alge: #7999a9;
+  --color-flower: #353866;
+  --color-smoke: #e4e4e4;
+
+  --borderRadius: 36px;
+
+  --font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+    overflow: hidden;
+    font-family: "Work Sans";
+    background-color: #F4F4F4;
+}
+
+.container {
+    overflow: hidden;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "plants habits info";
+}
+
+.container-pr {
+    margin: 0 auto;
+    max-width: 60%;
+    overflow: hidden;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "punishments rewards";
+}
+
+hr {
+    width: 400px;
+}
+
+.punishments {
+    grid-area: punishments;
+    justify-self: center;
+}
+
+.punishments h1 {
+    color: #DE5F54;
+}
+
+.pdetail {
+    cursor: default;
+    margin-top: 2em;
+}
+
+.pdetail:hover {
+    transition: all 0.1s ease-out;
+    transform: scale(1.01);
+}
+
+.pdetail p {
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+.rewards {
+    grid-area: rewards;
+    justify-self: center;
+}
+
+.rewards h1 {
+    color: #63A46C;
+}
+
+.rdetail {
+    cursor: default;
+    margin-top: 2em;
+}
+
+.rdetail:hover {
+    transition: all 0.1s ease-out;
+    transform: scale(1.01);
+}
+
+.rdetail p {
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+.container > * {
+    margin-left: 10%;
+}
+
+.plants {
+    grid-area: plants;
+}
+
+.sapling img {
+    margin-left: 10%;
+}
+
+.sapling p {
+    margin-left: 10%;
+    text-align: center;
+    max-width: 20%;
+    font-size: 0.7em;
+}
+
+.habits {
+    grid-area: habits;
+}
+
+div.habit-box {
+    background-color: #fff;
+    text-align: center;
+    padding: 0 0.2em 0.5em 0.2em;
+    margin-bottom: 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 25px;
+}
+
+.habit-box h3 {
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+
+.habit-box p {
+    font-size: 0.8em;
+    margin: 0em 0 1em 0;
+}
+
+.make {
+    border-color: #63A46C;
+    box-shadow: 2px 5px 10px #c1dbb9;
+}
+
+.break {
+    border-color: #DE5F54;
+    box-shadow: 2px 5px 10px #f0d0d0;
+}
+
+.info {
+    transform: translate(70%);
+    padding-left: 10%;
+    color: #f4f4f4;
+    background-color: #595D5F;
+    grid-area: info;
+    justify-self: end;
+    transition: all 0.5s ease-out;
+}
+
+.info:hover {
+    transform: translate(0px);
+    color: #eee;
+    background-color: #595D5F;
+}
+
+.buttons {
+    display: flex;
+
+    margin: 10px auto;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button a {
+    text-decoration: none;
+    color: unset;
+}
+
+.button {
+    display: flex;
+    overflow: hidden;
+    margin: 10px;
+    padding: 12px 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 150ms linear;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none !important;
+    text-transform: none;
+    text-transform: capitalize;
+    color: #fff;
+    border: 0 none;
+    border-radius: var(--borderRadius);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 80px;
+    box-shadow: 2px 5px 10px var(--color-smoke);
+}
+.button:hover {
+    transition: all 150ms linear;
+    opacity: 0.85;
+}
+.button:active {
+    transition: all 150ms linear;
+    opacity: 0.75;
+}
+.button:focus {
+    outline: 1px dotted #959595;
+    outline-offset: -4px;
+}
+.button.-regular {
+    color: #202129;
+    background-color: #fff;
+}
+.button.-regular:hover {
+    color: #202129;
+    background-color: #e1e2e2;
+    opacity: 1;
+}
+.button.-regular:active {
+    background-color: #d5d6d6;
+    opacity: 1;
+}
+.button.-dark {
+    color: var(--color-snow);
+    background: var(--color-dark);
+}
+.button.-dark:focus {
+    outline: 1px dotted white;
+    outline-offset: -4px;
+}
+.button.-green {
+    color: var(--color-snow);
+    background: var(--color-grass);
+}
+.button.-blue {
+    color: var(--color-snow);
+    background: var(--color-ocean);
+}
+.button.-salmon {
+    color: var(--color-snow);
+    background: var(--color-salmon);
+}
+.button.-sun {
+    color: #f15c5c;
+    background: var(--color-sun);
+}
+.button.-alge {
+    color: #e7ff20;
+    background: var(--color-alge);
+}
+.button.-flower {
+    color: #FE8CDF;
+    background: var(--color-flower);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
